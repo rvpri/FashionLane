@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Cart= () => {
-  // Access cart state from the Redux store
   const cartItems = useSelector((state) => state.cart);
   console.log(cartItems);
 
