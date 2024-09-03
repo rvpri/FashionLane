@@ -1,17 +1,16 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { useSelector } from "react-redux";
+import CartCard from "./CartCard";
+import { Navbar } from "./Navbar";
 
-const Cart= () => {
+const Cart = () => {
   const cartItems = useSelector((state) => state.cart);
-  console.log(cartItems);
 
   return (
     <div>
+      <Navbar />
       {cartItems.map((item) => (
-        <div key={item.id}>
-          <h2>{item.dressName}</h2>
-          <p>Price: ${item.price}</p>
-        </div>
+        <CartCard ClothItem={item} key={item.id} />
       ))}
     </div>
   );

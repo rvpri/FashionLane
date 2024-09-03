@@ -8,7 +8,7 @@ const Clothing = () => {
     <Stack direction="row" spacing={4} useFlexGap sx={{ flexWrap: "wrap" }}>
       {clothingItems.map((clothingItem) => (
         <ClothCard key={clothingItem.id} clothingItem={clothingItem} />
-      ))} 
+      ))}
     </Stack>
   );
 };

@@ -1,15 +1,14 @@
-import { Navbar } from "./Navbar"
-import Box from '@mui/material/Box';
+import { Navbar } from "./Navbar";
+import Box from "@mui/material/Box";
 import Clothing from "./Clothing";
 
 const HomePage = () => {
-    return (
-        <Box>
-           <Navbar />
-           <Clothing />
+  return (
+    <Box>
+      <Navbar />
+      <Clothing />
+    </Box>
+  );
+};
 
-        </Box>
-    )
-}
-
-export default HomePage
+export default HomePage;
