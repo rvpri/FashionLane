@@ -5,7 +5,12 @@ import { Stack } from "@mui/material";
 
 const Clothing = () => {
   return (
-    <Stack direction="row" spacing={4} useFlexGap sx={{ flexWrap: "wrap" }}>
+    <Stack
+      direction="row"
+      spacing={4}
+      useFlexGap
+      sx={{ flexWrap: "wrap", justifyContent: "center" }}
+    >
       {clothingItems.map((clothingItem) => (
         <ClothCard key={clothingItem.id} clothingItem={clothingItem} />
       ))}

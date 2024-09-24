@@ -16,7 +16,7 @@ const MenClothing = () => {
         spacing={{ xs: 3, sm: 3 }}
         direction="row"
         useFlexGap
-        sx={{ flexWrap: "wrap", m: 2 }}
+        sx={{ flexWrap: "wrap", m: 2, justifyContent: "center" }}
       >
         {MenClothingItems.map((menClothingItem) => (
           <ClothCard key={menClothingItem.id} clothingItem={menClothingItem} />

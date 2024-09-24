@@ -9,20 +9,27 @@ const ClothCard = ({ clothingItem }) => {
 
   return (
     <Card sx={{ maxWidth: 280 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="300"
-        image={image}
-      />
-      <CardContent
-        sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+      <Link
+        to={`/clothDetail/${id}`}
+        style={{ textDecoration: "none", color: "inherit" }}
       >
-        <Typography>
-          <Link to={`/clothDetail/${id}`}>{dressName}</Link>
-        </Typography>
-        <Typography>₹{price}</Typography>
-      </CardContent>
+        <CardMedia
+          component="img"
+          alt="green iguana"
+          height="300"
+          image={image}
+        />
+        <CardContent
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <Typography sx={{ fontWeight: "bold" }}>{dressName}</Typography>
+          <Typography>₹{price}</Typography>
+        </CardContent>
+      </Link>
     </Card>
   );
 };
