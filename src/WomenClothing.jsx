@@ -5,6 +5,7 @@ import ClothCard from "./ClothCard";
 import { Navbar } from "./Navbar";
 import SortOptions from "./SortOptions";
 import { useState } from "react";
+import Box from "@mui/material/Box";
 
 const WomenClothing = () => {
   const [sortOrder, setSortOrder] = useState("relevance");
@@ -13,7 +14,6 @@ const WomenClothing = () => {
     setSortOrder(event.target.value);
   };
 
-  console.log(sortOrder);
   const WomenClothingItems = clothingItems.filter(
     (clothingItem) => clothingItem.category === "women"
   );
@@ -27,10 +27,18 @@ const WomenClothing = () => {
       return 0;
     }
   });
+
   return (
     <>
       <Navbar />
-      <SortOptions sortOrder={sortOrder} onSortChange={handleSortChange} />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <SortOptions sortOrder={sortOrder} onSortChange={handleSortChange} />
+      </Box>
       <Stack
         spacing={{ xs: 1, sm: 2 }}
         direction="row"

@@ -9,6 +9,7 @@ import { useParams } from "react-router";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { AddToCart } from "./CartSlice";
+import store from "./Store.js";
 
 const ClothDetail = () => {
   const { clothID } = useParams();
@@ -21,15 +22,13 @@ const ClothDetail = () => {
 
   const { id, dressName, price, image } = dressDetail;
 
-  console.log(dressDetail);
-  console.log(selectedSize);
-
   const handleSizeSelect = (size) => {
     setSelectedSize(size);
   };
 
   function handleAddToCart() {
-    dispatch(AddToCart(id, dressName, price, image));
+    dispatch(AddToCart(id, dressName, price, image, selectedSize));
+    console.log("Updated Redux Store:", store.getState());
   }
 
   return (

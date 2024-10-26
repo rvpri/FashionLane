@@ -1,18 +1,17 @@
-import React from "react";
 import { useSelector } from "react-redux";
-import CartCard from "./CartCard";
 import { Navbar } from "./Navbar";
+import Box from "@mui/material/Box";
+import EmptyCart from "./EmptyCart";
+import LoadedCart from "./LoadedCart";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart);
-
+  console.log(cartItems.length);
   return (
-    <div>
+    <Box>
       <Navbar />
-      {cartItems.map((item) => (
-        <CartCard ClothItem={item} key={item.id} />
-      ))}
-    </div>
+      {cartItems.length ? <LoadedCart cartItems={cartItems} /> : <EmptyCart />}
+    </Box>
   );
 };
 
