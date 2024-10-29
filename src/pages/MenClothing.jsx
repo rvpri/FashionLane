@@ -1,9 +1,9 @@
 import React from "react";
-import { clothingItems } from "./Data";
+import { clothingItems } from "../Data";
 import { Stack } from "@mui/material";
-import ClothCard from "./ClothCard";
-import { Navbar } from "./Navbar";
-import SortOptions from "./SortOptions";
+import ClothCard from "../components/ClothCard";
+import { Navbar } from "../components/Navbar";
+import SortOptions from "../components/SortOptions";
 import { useState } from "react";
 import Box from "@mui/material/Box";
 

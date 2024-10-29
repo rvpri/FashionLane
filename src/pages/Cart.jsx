@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
-import { Navbar } from "./Navbar";
 import Box from "@mui/material/Box";
-import EmptyCart from "./EmptyCart";
-import LoadedCart from "./LoadedCart";
+import EmptyCart from "../components/EmptyCart";
+import LoadedCart from "../components/LoadedCart";
+import { Navbar } from "../components/Navbar";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart);

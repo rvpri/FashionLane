@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "./Home.jsx";
-import Cart from "./Cart.jsx";
-import MenClothing from "./MenClothing.jsx";
-import WomenClothing from "./WomenClothing.jsx";
-import ClothDetail from "./ClothDetail.jsx";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart.jsx";
+import MenClothing from "./pages/MenClothing.jsx";
+import WomenClothing from "./pages/WomenClothing";
+import ClothDetail from "./components/ClothDetail";
 
 export const router = createBrowserRouter([
   {

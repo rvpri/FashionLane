@@ -1,5 +1,5 @@
 import ClothCard from "./ClothCard";
-import { clothingItems } from "./Data";
+import { clothingItems } from "../Data";
 import { Stack } from "@mui/material";
 
 const Clothing = () => {

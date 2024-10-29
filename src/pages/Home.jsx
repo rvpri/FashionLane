@@ -1,6 +1,6 @@
-import { Navbar } from "./Navbar";
+import { Navbar } from "../components/Navbar";
 import Box from "@mui/material/Box";
-import Clothing from "./Clothing";
+import Clothing from "../components/Clothing";
 
 const HomePage = () => {
   return (

@@ -3,7 +3,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
-import { removeFromCart } from "./CartSlice";
+import { removeFromCart } from "../store/CartSlice";
 
 const CartCard = ({ ClothItem }) => {
   const dispatch = useDispatch();
