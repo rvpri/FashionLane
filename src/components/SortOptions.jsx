@@ -1,11 +1,15 @@
 import * as React from "react";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import { Typography } from "@mui/material";
-import { Stack } from "@mui/material";
+import {
+  MenuItem,
+  FormControl,
+  Select,
+  Typography,
+  Stack,
+} from "@mui/material";
 
-export default function SortOptions({ sortOrder, onSortChange }) {
+export default function SortOptions({ sortOrder, onSortChange, category }) {
+  const shopForCategory = category.charAt(0).toUpperCase() + category.slice(1);
+
   return (
     <div>
       <Stack
@@ -17,7 +21,7 @@ export default function SortOptions({ sortOrder, onSortChange }) {
           margin: "10px 0",
         }}
       >
-        <Typography variant="h6">SHOP FOR: WOMEN</Typography>
+        <Typography variant="h6">SHOP FOR: {shopForCategory} </Typography>
         <Stack direction="row" alignItems="center" spacing={{ xs: 1, sm: 2 }}>
           <Typography variant="subtitle1" gutterBottom>
             SORT BY{" "}

@@ -1,12 +1,8 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import { Typography } from "@mui/material";
+import { useState } from "react";
+import { Box, Stack, Typography, Button } from "@mui/material";
 import { Navbar } from "./Navbar.jsx";
-import Button from "@mui/material/Button";
 import { clothingItems } from "../Data.js";
 import { useParams } from "react-router";
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { AddToCart } from "../store/CartSlice";
 import store from "../store/Store";

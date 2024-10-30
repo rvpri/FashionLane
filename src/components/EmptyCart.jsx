@@ -1,7 +1,5 @@
 import NoItemsCart from "../assets/Images/NoItemsCart.png";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const EmptyCart = () => {
