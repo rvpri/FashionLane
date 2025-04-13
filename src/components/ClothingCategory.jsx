@@ -41,7 +41,7 @@ const ClothingCategory = ({ category }) => {
         />
       </Box>
       <Stack
-        spacing={{ xs: 3, sm: 3 }}
+        spacing={{ xs: 3, sm: 4 }}
         direction="row"
         useFlexGap
         sx={{ flexWrap: "wrap", m: 2, justifyContent: "center" }}

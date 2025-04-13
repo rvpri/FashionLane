@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "../store/CartSlice";
+import { showToast } from "../utils/showSuccessToast";
 
 const CartCard = ({ ClothItem }) => {
   const dispatch = useDispatch();
@@ -9,6 +10,7 @@ const CartCard = ({ ClothItem }) => {
 
   function handleRemoveFromCart() {
     dispatch(removeFromCart(id, selectedSize));
+    showToast("Product removed from cart!");
   }
 
   return (

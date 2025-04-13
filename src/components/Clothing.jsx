@@ -9,7 +9,7 @@ const Clothing = () => {
         direction="row"
         spacing={4}
         useFlexGap
-        sx={{ flexWrap: "wrap", justifyContent: "center" }}
+        sx={{ flexWrap: "wrap", justifyContent: "center", marginTop: 8 }}
       >
         {clothingItems.map((clothingItem) => (
           <ClothCard key={clothingItem.id} clothingItem={clothingItem} />

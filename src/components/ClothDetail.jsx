@@ -5,6 +5,7 @@ import { clothingItems } from "../Data.js";
 import { useParams } from "react-router";
 import { useDispatch } from "react-redux";
 import { AddToCart } from "../store/CartSlice";
+import { showToast } from "../utils/showSuccessToast";
 import store from "../store/Store";
 
 const ClothDetail = () => {
@@ -25,6 +26,7 @@ const ClothDetail = () => {
   function handleAddToCart() {
     dispatch(AddToCart(id, dressName, price, image, selectedSize));
     console.log("Updated Redux Store:", store.getState());
+    showToast("Product added to cart successfully!");
   }
 
   return (
