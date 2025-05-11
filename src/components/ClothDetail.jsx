@@ -1,21 +1,26 @@
 import { useState } from "react";
 import { Box, Stack, Typography, Button } from "@mui/material";
 import { Navbar } from "./Navbar.jsx";
-import { clothingItems } from "../Data.js";
+import { useGetClothingItemByIdQuery } from "../services/clothingApi";
 import { useParams } from "react-router";
 import { useDispatch } from "react-redux";
 import { AddToCart } from "../store/CartSlice";
 import { showToast } from "../utils/showSuccessToast";
-import store from "../store/Store";
+import Loading from "./Loader";
 
 const ClothDetail = () => {
   const { clothID } = useParams();
   const [selectedSize, setSelectedSize] = useState("S");
   const dispatch = useDispatch();
 
-  const dressDetail = clothingItems.find(
-    (clothingItem) => clothingItem.id === parseInt(clothID)
-  );
+  const {
+    data: dressDetail,
+    isLoading,
+    isError,
+  } = useGetClothingItemByIdQuery(clothID);
+
+  if (isLoading) return <Loading />;
+  if (isError) return <p>Error loading item</p>;
 
   const { id, dressName, price, image } = dressDetail;
 
@@ -25,7 +30,6 @@ const ClothDetail = () => {
 
   function handleAddToCart() {
     dispatch(AddToCart(id, dressName, price, image, selectedSize));
-    console.log("Updated Redux Store:", store.getState());
     showToast("Product added to cart successfully!");
   }
 

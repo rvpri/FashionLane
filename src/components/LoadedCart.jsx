@@ -3,7 +3,6 @@ import Stack from "@mui/material/Stack";
 import CartCard from "./CartCard";
 
 const LoadedCart = ({ cartItems }) => {
-  console.log(cartItems);
   return (
     <Stack
       direction="row"

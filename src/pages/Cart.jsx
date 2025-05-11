@@ -6,7 +6,6 @@ import { Navbar } from "../components/Navbar";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart);
-  console.log(cartItems.length);
   return (
     <Box>
       <Navbar />

@@ -1,0 +1,144 @@
+{
+  "clothingItems": [
+    {
+      "id": 1,
+      "dressName": "Chic Blue Top",
+      "price": 500,
+      "image": "/assets/Images/ChicBlueTop.png",
+      "category": "women"
+    },
+    {
+      "id": 2,
+      "dressName": "Casual T-Shirt",
+      "price": 450,
+      "image": "/assets/Images/CasualTShirt.png",
+      "category": "men"
+    },
+    {
+      "id": 3,
+      "dressName": "Floral Top",
+      "price": 800,
+      "image": "/assets/Images/FloralTop.png",
+      "category": "women"
+    },
+    {
+      "id": 4,
+      "dressName": "Regular Fit Printed Shirt",
+      "price": 700,
+      "image": "/assets/Images/RegularFitPrintedShirt.png",
+      "category": "men"
+    },
+    {
+      "id": 5,
+      "dressName": "Men Blue Denim Jacket",
+      "price": 750,
+      "image": "/assets/Images/MenBlueDeminJacket.png",
+      "category": "men"
+    },
+    {
+      "id": 6,
+      "dressName": "Blue Denim Jacket",
+      "price": 800,
+      "image": "/assets/Images/BlueDeminJacket.png",
+      "category": "women"
+    },
+    {
+      "id": 7,
+      "dressName": "Dark Blue T-shirt",
+      "price": 450,
+      "image": "/assets/Images/DarkBlueTshirt.png",
+      "category": "men"
+    },
+    {
+      "id": 8,
+      "dressName": "Slim Fit Jacket",
+      "price": 900,
+      "image": "/assets/Images/SlimFitJacket.png",
+      "category": "men"
+    },
+    {
+      "id": 9,
+      "dressName": "Oversized Casual Shirt",
+      "price": 600,
+      "image": "/assets/Images/OversizedCasualShirt.png",
+      "category": "men"
+    },
+    {
+      "id": 10,
+      "dressName": "Textured Maroon Sweater",
+      "price": 650,
+      "image": "/assets/Images/TexturedMaroonSweater.png",
+      "category": "women"
+    },
+    {
+      "id": 11,
+      "dressName": "Relaxed Fit Jacket",
+      "price": 850,
+      "image": "/assets/Images/RelaxedFitJacket.png",
+      "category": "women"
+    },
+    {
+      "id": 12,
+      "dressName": "Grey T-shirt",
+      "price": 350,
+      "image": "/assets/Images/GreyTshirt.png",
+      "category": "women"
+    },
+    {
+      "id": 13,
+      "dressName": "Black T-shirt",
+      "price": 500,
+      "image": "/assets/Images/BlackTshirt.png",
+      "category": "women"
+    },
+    {
+      "id": 14,
+      "dressName": "Regular Fit Sweatshirt",
+      "price": 600,
+      "image": "/assets/Images/RegularFitSweatshirt.png",
+      "category": "men"
+    },
+    {
+      "id": 15,
+      "dressName": "Fine Printed Shirt",
+      "price": 550,
+      "image": "/assets/Images/RegularFitPrintedShirt.png",
+      "category": "men"
+    },
+    {
+      "id": 16,
+      "dressName": "Light Blue Formal Top",
+      "price": 700,
+      "image": "/assets/Images/ChicBlueTop.png",
+      "category": "women"
+    },
+    {
+      "id": 17,
+      "dressName": "Pink T-Shirt",
+      "price": 400,
+      "image": "/assets/Images/CasualTShirt.png",
+      "category": "men"
+    },
+    {
+      "id": 18,
+      "dressName": "Men Olive Sweatshirt",
+      "price": 550,
+      "image": "/assets/Images/RegularFitSweatshirt.png",
+      "category": "men"
+    },
+    {
+      "id": 19,
+      "dressName": "Women Casual T-shirt",
+      "price": 400,
+      "image": "/assets/Images/GreyTshirt.png",
+      "category": "women"
+    },
+    {
+      "id": 20,
+      "dressName": "Printed Top",
+      "price": 600,
+      "image": "/assets/Images/FloralTop.png",
+      "category": "women"
+    }
+  ]
+}

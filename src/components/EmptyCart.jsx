@@ -1,4 +1,3 @@
-import NoItemsCart from "../assets/Images/NoItemsCart.png";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
@@ -32,7 +31,7 @@ const EmptyCart = () => {
           }}
         >
           <img
-            src={NoItemsCart}
+            src={"/assets/Images/NoItemsCart.png"}
             alt="Empty Cart"
             style={{
               width: "100%",
