@@ -1,17 +1,25 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
+import FreeShippingBanner from "./FreeShippingBanner";
 
 const PriceDetails = () => {
   const cartItems = useSelector((state) => state.cart);
   const totalMRP = cartItems.reduce(
-    (acc, currentItem) => acc + currentItem.price,
+    (acc, currentItem) => acc + currentItem.price * currentItem.quantity,
     0
   );
-  const shippingFee = totalMRP > 50 ? "Free" : 99;
-  const totalPrice = totalMRP + (shippingFee === "Free" ? 0 : shippingFee);
+  const shippingFee = totalMRP > 500 ? 0 : 99;
+  const totalPrice = totalMRP + shippingFee;
 
   return (
-    <div>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 2,
+      }}
+    >
       <Box
         sx={{
           width: 350,
@@ -27,9 +35,7 @@ const PriceDetails = () => {
         </Box>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography>Shipping fee</Typography>
-          <Typography>
-            {shippingFee === "Free" ? shippingFee : `₹${shippingFee}`}
-          </Typography>
+          <Typography>₹{shippingFee}</Typography>
         </Box>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography>Total</Typography>
@@ -39,7 +45,9 @@ const PriceDetails = () => {
           CHECKOUT
         </Button>
       </Box>
-    </div>
+
+      <FreeShippingBanner />
+    </Box>
   );
 };
 

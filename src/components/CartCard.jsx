@@ -3,6 +3,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "../store/CartSlice";
 import { showToast } from "../utils/showSuccessToast";
+import { Link } from "react-router-dom";
 
 const CartCard = ({ ClothItem }) => {
   const dispatch = useDispatch();
@@ -14,18 +15,21 @@ const CartCard = ({ ClothItem }) => {
   }
 
   return (
-    <>
-      <Stack
-        direction="row"
-        spacing={3}
-        sx={{
-          width: 500,
-          padding: 2,
-          marginBottom: 3,
-          borderColor: "#DCDCDC",
-          borderWidth: 1,
-          borderStyle: "solid",
-        }}
+    <Stack
+      direction="row"
+      spacing={3}
+      sx={{
+        width: 500,
+        padding: 2,
+        marginBottom: 3,
+        borderColor: "#DCDCDC",
+        borderWidth: 1,
+        borderStyle: "solid",
+      }}
+    >
+      <Link
+        to={`/clothDetail/${id}`}
+        style={{ textDecoration: "none", color: "inherit" }}
       >
         <Box
           sx={{
@@ -44,43 +48,50 @@ const CartCard = ({ ClothItem }) => {
             }}
           />
         </Box>
-        <Box sx={{ width: 400 }}>
+      </Link>
+
+      <Box sx={{ width: 400 }}>
+        <Link
+          to={`/clothDetail/${id}`}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
           <Typography sx={{ fontWeight: "bold" }} gutterBottom>
             {dressName}
           </Typography>
-          <Typography variant="body2" gutterBottom>
-            MRP ₹{price}
+        </Link>
+        <Typography variant="body2" gutterBottom>
+          MRP ₹{price}
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          Quantity: {quantity}
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          Size: {selectedSize}
+        </Typography>
+        <Stack
+          direction="row"
+          sx={{
+            justifyContent: "space-between",
+          }}
+        >
+          <Typography variant="body2">
+            15 days easy exchange & return
           </Typography>
-          <Typography variant="body2" gutterBottom>
-            Quantity: {quantity}
-          </Typography>
-          <Typography variant="body2" gutterBottom>
-            Size: {selectedSize}
-          </Typography>
-          <Stack
-            direction="row"
+          <Typography
+            variant="body2"
             sx={{
-              justifyContent: "space-between",
+              textDecoration: "underline",
+              color: "#002244",
+              fontWeight: "bold",
+              cursor: "pointer",
             }}
+            onClick={handleRemoveFromCart}
           >
-            <Typography variant="body2">
-              15 days easy exchange & return
-            </Typography>
-            <Typography
-              variant="body2"
-              sx={{
-                textDecoration: "underline",
-                color: "#002244",
-                fontWeight: "bold",
-              }}
-              onClick={handleRemoveFromCart}
-            >
-              DELETE
-            </Typography>
-          </Stack>
-        </Box>
-      </Stack>
-    </>
+            DELETE
+          </Typography>
+        </Stack>
+      </Box>
+    </Stack>
   );
 };
 
